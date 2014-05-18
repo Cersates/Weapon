@@ -114,9 +114,13 @@ class DataBase {
 //            return false;
 //        }
 //    }
-    public function select($table, $rows = '*') {
-        $q = 'SELECT ' . $rows . ' FROM ' . $table;
 
+
+    public function select($table, $rows = '*', $where = null) {
+        $q = 'SELECT ' . $rows . ' FROM ' . $table;
+        if ($where != null) {
+            $q .= ' WHERE ' . $where;
+        }
         $query = mysql_query($q);
 
         return $query;
@@ -162,6 +166,7 @@ class DataBase {
      */
 
     public function delete($table, $where = null) {
+        echo $where;
         if ($this->tableExists($table)) {
             if ($where == null) {
                 $delete = 'DELETE ' . $table;
