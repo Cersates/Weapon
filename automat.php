@@ -60,6 +60,8 @@
                                     echo '<p><strong class = "big">Длина ствола: </strong>' . $data['length'] . '</p>';
                                     echo '<p><strong class = "big">Колличество патронов: </strong>' . $data['capacity'] . '</p>';
                                     echo '<p><strong class = "big">Описание: </strong>' . $data['description'] . '</p>';
+                                    $tab = "automat";
+                                    echo '<p align = "right"><a href="DropData.php?id=' . $data['id'] . '&table=' . $tab . '">Удалить</a></p>';
                                     echo '<hr>';
                                 }
                                 ?>
