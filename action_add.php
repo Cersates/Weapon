@@ -6,24 +6,6 @@ include('./DataBase.php');
 $db = new Database();
 $db->connect();
 
-//=======================================================
-                                //1
-                                //2
-                                //3 
-                                //4 
-                                //5 
-                                //6 
-                                //7 
-                                //8 
-//=======================================================
-                                //name
-                                //calibr
-                                //weight
-                                //length
-                                //capacity
-                                //description
-                                //photo
-//=======================================================
 if ($_GET['add'] == 1) {
     $uploaddir = 'photo/';
     $uploadfile = $uploaddir . basename($_FILES['img']['name']);

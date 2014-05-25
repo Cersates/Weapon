@@ -61,7 +61,10 @@
                                     echo '<p><strong class = "big">Колличество патронов: </strong>' . $data['capacity'] . '</p>';
                                     echo '<p><strong class = "big">Описание: </strong>' . $data['description'] . '</p>';
                                     $tab = "automat";
-                                    echo '<p align = "right"><a href="DropData.php?id=' . $data['id'] . '&table=' . $tab . '">Удалить</a></p>';
+                                    if ($_SESSION['type_user'] == 1) {
+                                        echo '<p align = "right"><a href="DropData.php?id=' . $data['id'] . '&table=' . $tab . '&type=1">Удалить</a></p>';
+                                        echo '<p align = "right"><a href="DropData.php?id=' . $data['id'] . '&table=' . $tab . '&type=2">Редактировать</a></p>';
+                                    }
                                     echo '<hr>';
                                 }
                                 ?>
